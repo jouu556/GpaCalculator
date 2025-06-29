@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced GPA Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="column">
+            <h2>Semester GPA Calculator</h2>
+            <div id="coursesContainer">
+                <div class="course-row">
+                    <label>Course 1:</label>
+                    Name:
+                    <input type="text" class="course-name" placeholder="Course Name">
+                    Credits:
+                    <input type="number" class="course-credits" value="3" min="1">
+                    Grade:
+                    <select class="course-grade">
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="B-">B-</option>
+                        <option value="C+">C+</option>
+                        <option value="C">C</option>
+                        <option value="C-">C-</option>
+                        <option value="D+">D+</option>
+                        <option value="D">D</option>
+                        <option value="F">F</option>
+                    </select>
+                </div>
+            </div>
+            <button id="addCourseBtn">Add Course</button>
+            <button id="calculateBtn">Calculate Semester GPA</button>
+
+            <div id="semesterResult"></div>
+        </div>
+        <div class="column">
+            <h2>Accumulative GPA Calculator</h2>
+            <div>
+                <label>Current GPA:</label>
+                <input type="number" id="currentGPA" step="0.01" min="0" max="4">
+            </div>
+            <div>
+                <label>Completed Credits:</label>
+                <input type="number" id="completedCredits" min="0">
+            </div>
+            <button id="calcAccumulativeBtn">Calculate Accumulative GPA</button>
+            <div id="accumulativeResult"></div>
+
+            <h2>Goal GPA Planner</h2>
+            <div>
+                <label>Target Cumulative GPA:</label>
+                <input type="number" id="goalGPA" step="0.01" min="0" max="4">
+            </div>
+            <div>
+                <label>Next Semester Credits:</label>
+                <input type="number" id="nextSemesterCredits" min="1">
+            </div>
+            <button id="calcGoalBtn">Calculate Required Next Semester GPA</button>
+            <div id="goalResult"></div>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
